@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+pydantic-settings
+alembic
+pytest
+httpx
+pytest-asyncio

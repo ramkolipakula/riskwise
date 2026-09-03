@@ -1,0 +1,310 @@
+{
+  "model_name": "chargeback-histgradientboosting-v2",
+  "model_architecture": "HistGradientBoosting",
+  "dataset_version": "dataset-v2",
+  "evaluation_timestamp": "2026-09-03T08:27:49.840135+00:00",
+  "default_threshold": 0.7,
+  "features": [
+    "amount",
+    "is_new_device",
+    "attempt_count",
+    "previous_chargebacks",
+    "velocity_24h",
+    "account_age_days",
+    "amount_vs_customer_baseline",
+    "device_customer_count",
+    "failed_attempt_ratio"
+  ],
+  "metrics_by_threshold": [
+    {
+      "threshold": 0.3,
+      "precision": 0.265,
+      "recall": 0.67,
+      "f1": 0.38,
+      "accuracy": 0.751,
+      "false_positives": 422,
+      "false_negatives": 75,
+      "true_positives": 152,
+      "true_negatives": 1351,
+      "false_positive_cost": 4220.0,
+      "prevented_loss": 228474.6
+    },
+    {
+      "threshold": 0.4,
+      "precision": 0.317,
+      "recall": 0.63,
+      "f1": 0.422,
+      "accuracy": 0.804,
+      "false_positives": 308,
+      "false_negatives": 84,
+      "true_positives": 143,
+      "true_negatives": 1465,
+      "false_positive_cost": 3080.0,
+      "prevented_loss": 220071.57
+    },
+    {
+      "threshold": 0.5,
+      "precision": 0.389,
+      "recall": 0.581,
+      "f1": 0.466,
+      "accuracy": 0.849,
+      "false_positives": 207,
+      "false_negatives": 95,
+      "true_positives": 132,
+      "true_negatives": 1566,
+      "false_positive_cost": 2070.0,
+      "prevented_loss": 205445.03
+    },
+    {
+      "threshold": 0.6,
+      "precision": 0.466,
+      "recall": 0.542,
+      "f1": 0.501,
+      "accuracy": 0.877,
+      "false_positives": 141,
+      "false_negatives": 104,
+      "true_positives": 123,
+      "true_negatives": 1632,
+      "false_positive_cost": 1410.0,
+      "prevented_loss": 197966.14
+    },
+    {
+      "threshold": 0.7,
+      "precision": 0.594,
+      "recall": 0.502,
+      "f1": 0.544,
+      "accuracy": 0.904,
+      "false_positives": 78,
+      "false_negatives": 113,
+      "true_positives": 114,
+      "true_negatives": 1695,
+      "false_positive_cost": 780.0,
+      "prevented_loss": 188258.26
+    },
+    {
+      "threshold": 0.8,
+      "precision": 0.679,
+      "recall": 0.401,
+      "f1": 0.504,
+      "accuracy": 0.91,
+      "false_positives": 43,
+      "false_negatives": 136,
+      "true_positives": 91,
+      "true_negatives": 1730,
+      "false_positive_cost": 430.0,
+      "prevented_loss": 151593.06
+    },
+    {
+      "threshold": 0.9,
+      "precision": 0.821,
+      "recall": 0.282,
+      "f1": 0.42,
+      "accuracy": 0.911,
+      "false_positives": 14,
+      "false_negatives": 163,
+      "true_positives": 64,
+      "true_negatives": 1759,
+      "false_positive_cost": 140.0,
+      "prevented_loss": 96393.7
+    }
+  ],
+  "candidate_models": {
+    "Logistic Regression": [
+      {
+        "threshold": 0.3,
+        "precision": 0.162,
+        "recall": 0.907,
+        "f1": 0.275,
+        "false_positives": 1064,
+        "false_negatives": 21,
+        "false_positive_cost": 10640.0
+      },
+      {
+        "threshold": 0.4,
+        "precision": 0.197,
+        "recall": 0.85,
+        "f1": 0.32,
+        "false_positives": 788,
+        "false_negatives": 34,
+        "false_positive_cost": 7880.0
+      },
+      {
+        "threshold": 0.5,
+        "precision": 0.232,
+        "recall": 0.767,
+        "f1": 0.357,
+        "false_positives": 575,
+        "false_negatives": 53,
+        "false_positive_cost": 5750.0
+      },
+      {
+        "threshold": 0.6,
+        "precision": 0.285,
+        "recall": 0.692,
+        "f1": 0.404,
+        "false_positives": 394,
+        "false_negatives": 70,
+        "false_positive_cost": 3940.0
+      },
+      {
+        "threshold": 0.7,
+        "precision": 0.374,
+        "recall": 0.612,
+        "f1": 0.464,
+        "false_positives": 233,
+        "false_negatives": 88,
+        "false_positive_cost": 2330.0
+      },
+      {
+        "threshold": 0.8,
+        "precision": 0.486,
+        "recall": 0.471,
+        "f1": 0.479,
+        "false_positives": 113,
+        "false_negatives": 120,
+        "false_positive_cost": 1130.0
+      },
+      {
+        "threshold": 0.9,
+        "precision": 0.69,
+        "recall": 0.344,
+        "f1": 0.459,
+        "false_positives": 35,
+        "false_negatives": 149,
+        "false_positive_cost": 350.0
+      }
+    ],
+    "Random Forest": [
+      {
+        "threshold": 0.3,
+        "precision": 0.203,
+        "recall": 0.78,
+        "f1": 0.323,
+        "false_positives": 693,
+        "false_negatives": 50,
+        "false_positive_cost": 6930.0
+      },
+      {
+        "threshold": 0.4,
+        "precision": 0.263,
+        "recall": 0.665,
+        "f1": 0.377,
+        "false_positives": 423,
+        "false_negatives": 76,
+        "false_positive_cost": 4230.0
+      },
+      {
+        "threshold": 0.5,
+        "precision": 0.378,
+        "recall": 0.612,
+        "f1": 0.467,
+        "false_positives": 229,
+        "false_negatives": 88,
+        "false_positive_cost": 2290.0
+      },
+      {
+        "threshold": 0.6,
+        "precision": 0.48,
+        "recall": 0.52,
+        "f1": 0.499,
+        "false_positives": 128,
+        "false_negatives": 109,
+        "false_positive_cost": 1280.0
+      },
+      {
+        "threshold": 0.7,
+        "precision": 0.626,
+        "recall": 0.383,
+        "f1": 0.475,
+        "false_positives": 52,
+        "false_negatives": 140,
+        "false_positive_cost": 520.0
+      },
+      {
+        "threshold": 0.8,
+        "precision": 0.772,
+        "recall": 0.269,
+        "f1": 0.399,
+        "false_positives": 18,
+        "false_negatives": 166,
+        "false_positive_cost": 180.0
+      },
+      {
+        "threshold": 0.9,
+        "precision": 0.833,
+        "recall": 0.132,
+        "f1": 0.228,
+        "false_positives": 6,
+        "false_negatives": 197,
+        "false_positive_cost": 60.0
+      }
+    ],
+    "HistGradientBoosting": [
+      {
+        "threshold": 0.3,
+        "precision": 0.265,
+        "recall": 0.67,
+        "f1": 0.38,
+        "false_positives": 422,
+        "false_negatives": 75,
+        "false_positive_cost": 4220.0
+      },
+      {
+        "threshold": 0.4,
+        "precision": 0.317,
+        "recall": 0.63,
+        "f1": 0.422,
+        "false_positives": 308,
+        "false_negatives": 84,
+        "false_positive_cost": 3080.0
+      },
+      {
+        "threshold": 0.5,
+        "precision": 0.389,
+        "recall": 0.581,
+        "f1": 0.466,
+        "false_positives": 207,
+        "false_negatives": 95,
+        "false_positive_cost": 2070.0
+      },
+      {
+        "threshold": 0.6,
+        "precision": 0.466,
+        "recall": 0.542,
+        "f1": 0.501,
+        "false_positives": 141,
+        "false_negatives": 104,
+        "false_positive_cost": 1410.0
+      },
+      {
+        "threshold": 0.7,
+        "precision": 0.594,
+        "recall": 0.502,
+        "f1": 0.544,
+        "false_positives": 78,
+        "false_negatives": 113,
+        "false_positive_cost": 780.0
+      },
+      {
+        "threshold": 0.8,
+        "precision": 0.679,
+        "recall": 0.401,
+        "f1": 0.504,
+        "false_positives": 43,
+        "false_negatives": 136,
+        "false_positive_cost": 430.0
+      },
+      {
+        "threshold": 0.9,
+        "precision": 0.821,
+        "recall": 0.282,
+        "f1": 0.42,
+        "false_positives": 14,
+        "false_negatives": 163,
+        "false_positive_cost": 140.0
+      }
+    ]
+  },
+  "test_set_size": 2000,
+  "train_set_size": 8000
+}
