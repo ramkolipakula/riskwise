@@ -2,7 +2,7 @@
   "model_name": "chargeback-histgradientboosting-v2",
   "model_architecture": "HistGradientBoosting",
   "dataset_version": "dataset-v2",
-  "evaluation_timestamp": "2026-09-03T08:27:49.840135+00:00",
+  "evaluation_timestamp": "2026-09-03T09:00:37.049647+00:00",
   "default_threshold": 0.7,
   "features": [
     "amount",
