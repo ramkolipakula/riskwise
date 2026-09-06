@@ -179,7 +179,17 @@ export default function Simulator() {
       setResult(res.data);
     } catch (err: any) {
       setSteps((prev) => [...prev, 'ERROR']);
-      setError(err.response?.data?.detail || err.message);
+      let errorMsg = err.message;
+      if (err.response?.data?.detail) {
+        if (typeof err.response.data.detail === 'string') {
+          errorMsg = err.response.data.detail;
+        } else if (Array.isArray(err.response.data.detail)) {
+          errorMsg = err.response.data.detail.map((d: any) => `${d.loc?.join('.')}: ${d.msg}`).join(', ');
+        } else {
+          errorMsg = JSON.stringify(err.response.data.detail);
+        }
+      }
+      setError(errorMsg);
     } finally {
       setEvaluating(false);
     }
