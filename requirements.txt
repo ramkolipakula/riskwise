@@ -8,3 +8,6 @@ pytest
 httpx
 pytest-asyncio
 psycopg2-binary
+scikit-learn
+pandas
+numpy
